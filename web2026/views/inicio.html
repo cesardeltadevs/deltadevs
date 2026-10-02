@@ -1,27 +1,13 @@
 <!doctype html>
 <html lang="es-mx">
-<base href="{{ @BASE }}/ui/">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>Delta Developers MX</title>
     
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/bootstrap-selector/css/bootstrap-select.min.css">
-    
-    <link rel="stylesheet" href="vendors/themify-icon/themify-icons.css">
-    <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
-    <link rel="stylesheet" href="vendors/animation/animate.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendors/magnify-pop/magnific-popup.css">
-    <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
-    <link rel="stylesheet" href="vendors/scroll/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="vendors/elagent/style.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <include href="plantilla/styles.html" />
 </head>
 
 <body>
@@ -79,67 +65,11 @@
         </div>
     </div>
     <div class="body_wrapper">
-        <header class="header_area">
-            <nav class="navbar navbar-expand-lg menu_six">
-                <div class="container custom_container p0">
-                    <a class="navbar-brand sticky_logo" href="#">
-                        <img src="img/logo_deltadevs_lg.png" srcset="img/logo2x-2.png 2x" alt="logo" class="w-25">
-                            <img src="img/logo_deltadevs_lg.png" srcset="img/logo_deltadevs_lg.png 2x" alt="" class="w-25">
-                    </a>
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="menu_toggle">
-                            <span class="hamburger">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                            <span class="hamburger-cross">
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav menu ms-auto me-auto">
-                            <li class="nav-item dropdown submenu mega_menu mega_menu_two active">
-                                <a class="nav-link" href="#" role="button">
-                                    Inicio
-                                </a>
-                            </li>
-                            
-                            <li class="nav-item dropdown submenu mega_menu">
-                                <a class="nav-link" href="#" role="button">
-                                    Servicios
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown submenu">
-                                <a class="nav-link" href="#" role="button">
-                                    Nosotros
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown submenu">
-                                <a class="nav-link" href="#" role="button">
-                                    Contacto
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown submenu mega_menu">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    Más información
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        <include href="plantilla/menu.html" />
 
         <section class="saas_banner_area d-flex align-items-center">
-            <img class="saas_shap" src="img/home6/shape-1.png" alt="">
-            <img class="saas_shap" src="img/home6/shape2.png" alt="">
+            <img class="saas_shap" src="{{ @ruta }}assets/img/home6/shape-1.png" alt="">
+            <img class="saas_shap" src="{{ @ruta }}assets/img/home6/shape2.png" alt="">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -149,11 +79,11 @@
                                 Soluciones reales para empresas reales, con el contexto que la inteligencia artificial no tiene.</p>
                             <div class="action_btn d-flex align-items-center mt_40 justify-content-center wow fadeInUp"
                                 data-wow-delay="0.5s">
-                                <a href="#servicios" class="btn_hover saas_banner_btn">Conoce nuestros servicios</a>
+                                <a href="{{ @ruta }}servicios" class="btn_hover saas_banner_btn">Conoce nuestros servicios</a>
                             </div>
                         </div>
                         <div class="dasboard_img mt_60 wow fadeInUp" data-wow-delay="0.7s">
-                            <img class="img-fluid" src="img/home6/dashboard.jpg" alt="">
+                            <img class="img-fluid" src="{{ @ruta }}assets/img/home6/dashboard.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -170,7 +100,7 @@
                                 Nuestros Servicios</h2>
                             <p class="f_400 f_size_15 l_height_28 d_p_color mb_50 wow fadeInUp" data-wow-delay="0.4s">
                                 No vendemos horas de código ni paquetes genéricos. Entendemos cómo funciona tu empresa y convertimos ese contexto en tecnología que resuelve problemas concretos.</p>
-                            <a href="#contacto" class="btn_hover btn_five wow fadeInUp" data-wow-delay="0.5s">Hablemos de tu proyecto</a>
+                            <a href="{{ @ruta }}contacto" class="btn_hover btn_five wow fadeInUp" data-wow-delay="0.5s">Hablemos de tu proyecto</a>
                         </div>
                     </div>
                     <div class="col-lg-7 saas_featured_info">
@@ -221,7 +151,7 @@
                             <div class="number">1</div>
                             <div class="separator"></div>
                             <div class="new_service_content">
-                                <img src="img/home-10/icon1.png" alt="">
+                                <img src="{{ @ruta }}assets/img/home-10/icon1.png" alt="">
                                 <h4 class="f_size_20 f_p f_500">Fase 1. Tu prototipo</h4>
                                 <p class="f_400 f_size_15 mb-0">Partimos del prototipo que creaste con IA. Revisamos la idea, su alcance y lo que tu negocio necesita para convertirlo en un proyecto viable.</p>
                             </div>
@@ -232,7 +162,7 @@
                             <div class="number">2</div>
                             <div class="separator"></div>
                             <div class="new_service_content">
-                                <img src="img/home-10/icon2.png" alt="">
+                                <img src="{{ @ruta }}assets/img/home-10/icon2.png" alt="">
                                 <h4 class="f_size_20 f_p f_500">Fase 2. Análisis y desarrollo</h4>
                                 <p class="f_400 f_size_15 mb-0">Analizamos tus procesos junto contigo y desarrollamos el sistema: arquitectura, integraciones, seguridad y las funciones que tu operación realmente requiere.</p>
                             </div>
@@ -243,7 +173,7 @@
                             <div class="number">3</div>
                             <div class="separator"></div>
                             <div class="new_service_content">
-                                <img src="img/home-10/icon3.png" alt="">
+                                <img src="{{ @ruta }}assets/img/home-10/icon3.png" alt="">
                                 <h4 class="f_size_20 f_p f_500">Fase 3. Implementación en producción</h4>
                                 <p class="f_400 f_size_15 mb-0">Ponemos la solución en producción, acompañamos a tu equipo durante la adopción y dejamos el sistema listo para crecer y generarte valor.</p>
                             </div>
@@ -260,28 +190,28 @@
                 <div class="row saas_featured_info">
                     <div class="col-lg-6">
                         <div class="f_img_one img_border wow fadeInLeft" data-wow-delay="0.3s">
-                            <img class="img-fluid" src="img/home6/featured_img_one.jpg" alt="">
+                            <img class="img-fluid" src="{{ @ruta }}assets/img/home6/featured_img_one.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex align-items-center pl_100">
                         <div class="saas_featured_content wow fadeInRight" data-wow-delay="0.4s">
                             <h2 class="f_size_30 f_600 f_p w_color l_height40 mb_20">Automatiza lo que hoy te cuesta tiempo o dinero</h2>
                             <p class="d_p_color f_400 f_size_15 l_height28">A veces basta con conectar dos sistemas o eliminar una captura manual. Otras veces la IA puede analizar datos, procesar documentos o ejecutar tareas repetitivas.</p>
-                            <a href="#contacto" class="btn_hover saas_banner_btn mt_40">Diagnosticar un proceso</a>
+                            <a href="{{ @ruta }}contacto" class="btn_hover saas_banner_btn mt_40">Diagnosticar un proceso</a>
                         </div>
                     </div>
                 </div>
                 <div class="row saas_featured_info flex-row-reverse">
                     <div class="col-lg-6">
                         <div class="f_img_two img_border wow fadeInRight" data-wow-delay="0.4s">
-                            <img class="img-fluid" src="img/home6/featured_img_two.jpg" alt="">
+                            <img class="img-fluid" src="{{ @ruta }}assets/img/home6/featured_img_two.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex align-items-center pr_70">
                         <div class="saas_featured_content wow fadeInLeft" data-wow-delay="0.3s">
                             <h2 class="f_size_30 f_600 f_p w_color l_height40 mb_20">Tu infraestructura, funcionando y respaldada</h2>
                             <p class="d_p_color f_400 f_size_15 l_height28">Administramos servidores, servicios en la nube e infraestructura híbrida con monitoreo, actualizaciones, respaldos comprobados y prevención continua.</p>
-                            <a href="#contacto" class="btn_hover saas_banner_btn mt_40">Proteger mi infraestructura</a>
+                            <a href="{{ @ruta }}contacto" class="btn_hover saas_banner_btn mt_40">Proteger mi infraestructura</a>
                         </div>
                     </div>
                 </div>
@@ -294,7 +224,7 @@
                         <div class="fact_author_img text-end">
                             <div class="square_box box_three"></div>
                             <div class="square_box box_four"></div>
-                            <img class="wow fadeInUp" data-wow-delay="0.4s" src="img/home6/trust_img2.png" alt="">
+                            <img class="wow fadeInUp" data-wow-delay="0.4s" src="{{ @ruta }}assets/img/home6/trust_img2.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6">
@@ -328,7 +258,7 @@
                             <div class="feed_back_author">
                                 <div class="media">
                                     <div class="img">
-                                        <img src="img/home6/feedback_img_two.png" alt="">
+                                        <img src="{{ @ruta }}assets/img/home6/feedback_img_two.png" alt="">
                                     </div>
                                     <div class="media-body">
                                         <h5 class="w_color f_size_15 f_p f_500">Directora de empresa</h5>
@@ -354,7 +284,7 @@
                             <div class="feed_back_author">
                                 <div class="media">
                                     <div class="img">
-                                        <img src="img/home6/feedback_img_two.png" alt="">
+                                        <img src="{{ @ruta }}assets/img/home6/feedback_img_two.png" alt="">
                                     </div>
                                     <div class="media-body">
                                         <h5 class="w_color f_size_15 f_p f_500">Empresa comercializadora</h5>
@@ -380,7 +310,7 @@
                             <div class="feed_back_author">
                                 <div class="media">
                                     <div class="img">
-                                        <img src="img/home6/feedback_img_two.png" alt="">
+                                        <img src="{{ @ruta }}assets/img/home6/feedback_img_two.png" alt="">
                                     </div>
                                     <div class="media-body">
                                         <h5 class="w_color f_size_15 f_p f_500">Experiencia Delta</h5>
@@ -409,88 +339,28 @@
             <div class="container">
                 <div class="row partner_info">
                     <div class="logo_item wow fadeInLeft" data-wow-delay="0.2s">
-                        <a href="#"><img src="img/home6/logo_01.png" alt=""></a>
+                        <a href="#"><img src="{{ @ruta }}assets/img/home6/logo_01.png" alt=""></a>
                     </div>
                     <div class="logo_item wow fadeInLeft" data-wow-delay="0.4s">
-                        <a href="#"><img src="img/home6/logo_02.png" alt=""></a>
+                        <a href="#"><img src="{{ @ruta }}assets/img/home6/logo_02.png" alt=""></a>
                     </div>
                     <div class="logo_item wow fadeInLeft" data-wow-delay="0.6s">
-                        <a href="#"><img src="img/home6/logo_03.png" alt=""></a>
+                        <a href="#"><img src="{{ @ruta }}assets/img/home6/logo_03.png" alt=""></a>
                     </div>
                     <div class="logo_item wow fadeInLeft" data-wow-delay="0.8s">
-                        <a href="#"><img src="img/home6/logo_04.png" alt=""></a>
+                        <a href="#"><img src="{{ @ruta }}assets/img/home6/logo_04.png" alt=""></a>
                     </div>
                     <div class="logo_item wow fadeInLeft" data-wow-delay="0.9s">
-                        <a href="#"><img src="img/home6/logo_05.png" alt=""></a>
+                        <a href="#"><img src="{{ @ruta }}assets/img/home6/logo_05.png" alt=""></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer id="contacto" class="footer_area_six sec_pad">
-            <div class="footer_top_six">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="f_widget company_widget">
-                                <a href="{{@BASE}}" class="f-logo"><img src="img/logo_deltadevs_lg.png"
-                                        srcset="img/logo_deltadevs_lg.png 2x" alt="logo" width="200"></a>
-                                <p class="mt_40">Más de 10 años construyendo tecnología que se adapta a tu negocio.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="f_widget about-widget">
-                                <h3 class="f-title f_600 w_color f_size_18 mb_40">Delta Developers</h3>
-                                <ul class="list-unstyled f_list">
-                                    <li><a href="#servicios">Servicios</a></li>
-                                    <li><a href="#">Por qué Delta</a></li>
-                                    <li><a href="#">Proyectos</a></li>
-                                    <li><a href="#contacto">Contacto</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="f_widget about-widget">
-                                <h3 class="f-title f_600 w_color f_size_18 mb_40">Hablemos</h3>
-                                <ul class="list-unstyled f_list">
-                                    <li><a href="#contacto">Solicitar diagnóstico</a></li>
-                                    <li><a href="#contacto">Soporte técnico</a></li>
-                                    <li><a href="#contacto">Desarrollo a la medida</a></li>
-                                    <li><a href="#contacto">Administración de sistemas</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-sm-6">
-                            <div class="f_widget social-widget">
-                                <h3 class="f-title f_600 w_color f_size_18 mb_40">Síguenos</h3>
-                                <div class="f_social_icon">
-                                    <a href="#" class="ti-facebook"></a>
-                                    <a href="#" class="ti-twitter-alt"></a>
-                                    <a href="#" class="ti-vimeo-alt"></a>
-                                    <a href="#" class="ti-pinterest"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <include href="plantilla/footer.html" />
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="vendors/bootstrap-selector/js/bootstrap-select.min.js"></script>
-    <script src="vendors/wow/wow.min.js"></script>
-    <script src="vendors/sckroller/jquery.parallax-scroll.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
-    <script src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope-min.js"></script>
-    <script src="vendors/magnify-pop/jquery.magnific-popup.min.js"></script>
-    <script src="vendors/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/main.js"></script>
+    
+    <include href="plantilla/scripts.html" />
 </body>
 
 </html>

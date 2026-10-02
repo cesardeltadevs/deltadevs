@@ -19,6 +19,17 @@ if ((float)PCRE_VERSION<8.0)
 // Load configuration
 $f3->config('config.ini');
 
+if($f3->get('DEBUG') == 0) {
+	$f3->set('ruta', 'https://' . $f3->get('HOST') . '/');
+}
+else {
+	$f3->set('ruta', 'http://' . $f3->get('HOST') . ':' . $f3->get('PORT') . '/');
+}
+
 $f3->route('GET /', "controllers\HomeController->HomeView");
+$f3->route('GET /servicios', "controllers\HomeController->ServicesView");
+$f3->route('GET /nosotros', "controllers\HomeController->AboutView");
+$f3->route('GET /contacto', "controllers\HomeController->ContactView");
+$f3->route('POST /enviar', "controllers\HomeController->SendContactForm");
 
 $f3->run();
